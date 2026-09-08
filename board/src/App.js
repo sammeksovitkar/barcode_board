@@ -140,7 +140,7 @@ export default function App() {
     try {
       // 📌 Vercel / Local backend URL:
       const BACKEND_URL = process.env.NODE_ENV === 'production' 
-        ? 'https://backend-6c7bsb4qh-sammek-sovitkars-projects.vercel.app/api/upload-board' 
+        ? 'https://backend-gules-ten-84.vercel.app/' 
         : 'http://localhost:5000/api/upload-board';
 
       const response = await fetch(BACKEND_URL, {
