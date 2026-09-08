@@ -22,7 +22,9 @@ cloudinary.config({
 console.log('API Key Status:', process.env.CLOUDINARY_API_KEY ? '✅ Loaded' : '❌ Not Loaded');
 
 const upload = multer({ storage: multer.memoryStorage() });
-
+app.get('/', (req, res) => {
+  res.send('Backend is running successfully!');
+});
 app.post('/api/upload-board', upload.fields([
   { name: 'civilPdf', maxCount: 1 },
   { name: 'criminalPdf', maxCount: 1 }
